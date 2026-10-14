@@ -1,0 +1,8 @@
+use crate::asserts::assert_none_or_eq_256;
+
+fn main() {
+    let first: Option<u256> = witness::FIRST;
+    let second: Option<u256> = witness::SECOND;
+    let check_none: bool = witness::CHECK_NONE;
+    assert_none_or_eq_256(check_none, first, second);
+}

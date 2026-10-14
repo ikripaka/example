@@ -1,0 +1,35 @@
+# DEFAULT CONFIG 
+
+# [build]
+# src_dir = "./simf"
+# simf_files = ["*.simf"]
+# out_dir = "./src/artifacts"
+
+# [dependencies]
+# some_dep = { git = "<git url>", path = "<or relative path>", <tag | rev | branch> = "<tag name | commit | branch name>", package = "<dir path>" }
+
+# [regtest]
+# mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+# bitcoins = 10_000_000
+# rpc_port = 18443
+# esplora_port = 3000
+# rpc_user = "user"
+# rpc_password = "password"
+
+# [test]
+# mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+# bitcoins = 10_000_000
+# verbosity = 0
+
+# [test.fuzz]
+# cases = 10000
+# seed = 12345
+
+# [test.esplora]
+# url = "<esplora url>"
+# network = "<Liquid, LiquidTestnet, ElementsRegtest>"
+
+# [test.rpc]
+# url = "<rpc url>"
+# username = "<rpc username>"
+# password = "<rpc password>"

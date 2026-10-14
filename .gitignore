@@ -1,0 +1,5 @@
+src/artifacts
+fuzz-failures/
+
+/target
+.idea

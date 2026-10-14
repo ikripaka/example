@@ -1,0 +1,16 @@
+use crate::asserts::{assert_eq_256, assert_none_256};
+
+fn main() {
+    let function_index: u8 = witness::FUNCTION_INDEX;
+    let first: Option<u256> = witness::FIRST_ARG_U256;
+    let second: Option<u256> = witness::SECOND_ARG_U256;
+
+    match jet::eq_8(6, function_index) {
+        true => assert_eq_256(unwrap(first), unwrap(second)),
+        false => (),
+    };
+    match jet::eq_8(14, function_index) {
+        true => assert_none_256(first),
+        false => (),
+    };
+}

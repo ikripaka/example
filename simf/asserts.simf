@@ -1,0 +1,16 @@
+pub fn assert_eq_256(a: u256, b: u256) {
+    assert!(jet::eq_256(a, b));
+}
+
+pub fn assert_none_256(value: Option<u256>) {
+    assert!(is_none::<u256>(value));
+}
+
+/// Checks that first is None, or that both optional values contain equal u256s.
+/// The inactive equality branch is useful for testing witness pruning.
+pub fn assert_none_or_eq_256(check_none: bool, first: Option<u256>, second: Option<u256>) {
+    match check_none {
+        true => assert_none_256(first),
+        false => assert_eq_256(unwrap(first), unwrap(second)),
+    };
+}
