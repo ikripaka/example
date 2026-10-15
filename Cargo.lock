@@ -1458,6 +1458,7 @@ name = "simplex_example_2"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "hex",
  "simplicityhl",
  "smplx-std",
 ]
